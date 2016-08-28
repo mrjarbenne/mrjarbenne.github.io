@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <title> Youtube Playlist Generator </title>
+    <meta charset='utf-8'> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: helvetica;
+            /*margin:25px;*/
+            background-color:#444;
+            color:#fff;
+            font-size:90%;
+        }
+        a, .nolink{
+            background:#222;
+            width:90%;
+            padding:8px 5%;
+            /*text-indent:8px;*/
+            display:block;
+            border-top:1px solid #111;
+            border-bottom:1px solid #111;
+            border-radius:8px;
+            text-align:center;
+        }
+        a:link{color:#fff}
+        a:visited{color:#fff}
+        a:hover{color:#FF3C00}
+        .instructions {
+            margin: auto;
+            display:block;
+            padding:25px;
+            text-align:center;
+        }
+        textarea {
+            width:80%;
+            margin: auto;
+            display:block;
+            padding:4px;
+            background:#333;
+            color:#fff;
+            border:1px solid #eee;
+        } textarea:active,textarea:focus {
+            /*border: 1px solid #FF3300;*/
+            border: 1px solid #aaa;
+        }
+        .create {
+            margin: auto;
+            display:block;
+            background:#333;
+            color:#fff;
+            padding:4px;
+            border-radius:2px;
+            border:1px solid #aaa;
+            font-size:110%;
+        }
+        #playlistLink {
+            margin: auto;
+            display:block;
+        }
+    </style>
+</head>
+
+<body>
+
+<span class="instructions">Paste a list of Youtube URL's below to create a Playlist...</span>
+
+<textarea name="youtubeUrls" id="youtubeUrls" cols="30" rows="10"></textarea>
+<br/><div id="playlistLink"></div><br/>
+<button class="create">Create Playlist</button>
+
+<script type="text/javascript">
+/*
+    http://www.youtube.com/watch?v=BuWF4QX8zSo
+    http://www.youtube.com/watch?v=evuwn_7pdPU
+    http://www.youtube.com/watch?v=ihwzG5-W8tE
+    http://www.youtube.com/watch?v=Kevdt1T9daA
+    http://www.youtube.com/watch?v=fh5yJG7No3w
+    http://www.youtube.com/watch?v=jBPpT_DtJLM
+    http://www.youtube.com/watch?v=oKpPd2hDrE4
+*/
+$('.create').click(function(){
+    list = $('#youtubeUrls').val().split('\n');
+    playlist = []
+    for (str in list) {
+        str = list[str];
+        if (str.toLowerCase().contains('youtube.com/watch?v=')) {
+            str = str.split('youtube.com\/watch?v=').slice(-1)[0]
+            // console.log(str);
+            playlist.push(str);
+        }
+    }
+    
+    if (playlist != [] && playlist !='' ) {
+        newTab =  "target='_blank'"; // If wanted in a new tab //
+        plStr = "http://www.youtube.com/embed/?playlist="+String(playlist)
+        console.log(plStr);
+        $('#playlistLink').html("<a href='"+plStr+"'"+newTab+">"+plStr+"</a>");
+    } else {
+  $('#playlistLink').html("<span class='nolink'>Add Some Youtube Links!  : )</span>");
+  }
+    
+});
+</script>
+</body>
+</html>
