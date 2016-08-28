@@ -84,9 +84,12 @@ $('.create').click(function(){
     playlist = []
     for (str in list) {
         str = list[str];
-        if (str.toLowerCase().contains('youtube.com/watch?v=')) {
-            str = str.split('youtube.com\/watch?v=').slice(-1)[0]
-            // console.log(str);
+        if (str.toLowerCase().includes('youtube.com/watch?v=')) {
+            str = str.split('youtube.com/watch?v=').slice(-1)[0];
+            playlist.push(str);
+        }
+        if (str.toLowerCase().includes('youtu.be/')) {
+            str = str.split('youtu.be/').slice(-1)[0];
             playlist.push(str);
         }
     }
