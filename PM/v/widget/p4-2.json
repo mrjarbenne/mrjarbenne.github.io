@@ -1,0 +1,16 @@
+{
+  "data": {
+    "imports_from": "hor_progress",
+    "answers": [
+      "\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eWhen asked whether the horizontal speed of the ball changes as it moves, you picked the answer, \"Yes, it speeds up.\"\u003c/div\u003e\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eYou may want to take a closer look at the line spacing.\u003c/div\u003e",
+      "\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eWhen asked whether the horizontal speed of the ball changes as it moves, you picked the answer, \"No, it remains the same.\"\u003c/div\u003e\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eThis is correct.  Nice job!\u003c/div\u003e",
+      "\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eWhen asked whether the horizontal speed of the ball changes as it moves, you picked the answer, \"Yes, it slows down.\"\u003c/div\u003e\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eYou may want to take a closer look at the line spacing.\u003c/div\u003e",
+      "\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eWhen asked whether the horizontal speed of the ball changes as it moves, you picked the answer, \"Yes, it slows down first, then speeds up.\"\u003c/div\u003e\u003cdiv style\u003d\"padding: 30px; margin: 0px; font-size: large; font-weight: bolder;\"\u003eYou may want to take a closer look at the line spacing.\u003c/div\u003e"
+    ],
+    "id": "Widget_p4-2"
+  },
+  "layout": {
+    "template": "answer",
+    "type": "widget"
+  }
+}

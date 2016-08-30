@@ -1,0 +1,15 @@
+/* Graphical Styling */
+#container {
+        background-color: rgba(246,235,0,0.2);
+}
+
+#load-block {
+        background-color: beige;
+}
+
+#credits {
+        background-color:beige;
+        width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+}

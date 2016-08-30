@@ -1,0 +1,30 @@
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+
+<div id="<%= id %>"  class="fill scrollable">
+	<p class="question_text" >
+		<%= instructions %>
+	</p>
+	
+	<% $.each(sliders, function (index, slider) { %>
+		<% if(orientation === "horizontal") { %>
+			<p class="slider_label">
+				<%= slider.label %> : <span class="slider-<%= index %>-value"></span>
+			</p>
+			<div class='slider-h slider-<%= index %>'>
+				<span class="left_slider" ></span><span class="slider_marker"></span>
+			</div>
+		<% } else { %>
+		<div class="vert_box">
+			<p class="slider_label"> <%= slider.label %> </p>
+			<div class='slider-v slider-<%= index %>'>
+				<div class="vertical left_slider" ></div><div class="vertical slider_marker"></div>
+			</div>
+			<p class="vert_val slider-<%= index %>-value"></p>
+		</div>
+		<% } %>
+	<% }); %>
+	
+</div>
+

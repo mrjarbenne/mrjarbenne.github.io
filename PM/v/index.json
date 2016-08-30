@@ -1,0 +1,96 @@
+{
+  "data": {
+    "name": "Projectile_Motion",
+    "title": "Projectile Motion",
+    "finish_url": "finish.html",
+    "aspect_ratio": 1.778,
+    "min_width": 800,
+    "min_height": 450,
+    "max_width": 1200,
+    "max_height": 675,
+    "threshold": 7
+  },
+  "elements": [
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "login.json",
+      "next_page": [
+        7
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "p7.json",
+      "next_page": [
+        9
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "p6.json",
+      "next_page": [
+        1
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "p5.json",
+      "next_page": [
+        2
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "p4.json",
+      "next_page": [
+        3
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "p3.json",
+      "next_page": [
+        4
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "p2.json",
+      "next_page": [
+        5
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "p1.json",
+      "next_page": [
+        6
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "credits.json",
+      "next_page": [
+        -1
+      ]
+    },
+    {
+      "slot": "#page-container",
+      "type": "page",
+      "data": "certificate.json",
+      "next_page": [
+        -1,
+        8
+      ]
+    }
+  ]
+}

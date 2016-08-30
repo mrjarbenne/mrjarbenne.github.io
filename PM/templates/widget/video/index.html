@@ -1,0 +1,12 @@
+<style>
+#<%= id %> .mejs-captions-selector {
+	<% if (typeof subs !== "undefined") { %>
+		height: <%= (subs.length + 1) * 25 %>px !important;
+	<% } %>
+}
+</style>
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+<div id="<%= id %>" class="video_div">
+</div>

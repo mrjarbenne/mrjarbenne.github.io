@@ -1,0 +1,9 @@
+{
+  "data": {
+    "id": "Widget_p5-2"
+  },
+  "layout": {
+    "template": "text-html",
+    "type": "widget"
+  }
+}

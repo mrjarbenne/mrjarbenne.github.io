@@ -1,0 +1,119 @@
+<style>
+#<%= id %> {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+<% if (typeof scrub_bar_location !== "undefined" && scrub_bar_location == "below") { %>
+<div class="flex-wrapper">
+<% } %>
+	<div id="<%= id %>" class="x_y_analysis_div" >
+		<div class="analysis_message">
+			Please click closer to the target.
+		</div>
+		<div class="instruction_message">
+		<% if (typeof instructions_location !== "undefined") { %>
+			<% if (instructions_location === "top") { %>
+				<div class="instruction_message_top">
+			<% } else if (instructions_location === "bottom") { %>
+				<div class="instruction_message_bottom">
+			<% } else if (instructions_location === "middle") { %>
+				<div class="instruction_message_middle">
+			<% } else { %>
+				<div class="instruction_message_middle">
+			<% } %>
+		<% } else { %>
+			<div class="instruction_message_middle">
+		<% } %>
+			<% if (typeof instructions !== "undefined") { %>
+				<%= instructions %>
+			<% } %>
+			</div>
+		</div>
+		<canvas class="the_canvas">
+			Sorry, your browser does not support html5.
+		</canvas>
+		<div class="nostretch"><img class="image analysis faux-image" src="<%= resource_url %>/<%= frames[0] %>" />
+		<% $.each(frames, function (index, frame) { %>
+			<img class="image analysis analysis_img real-image" src="<%= resource_url %>/<%= frame %>" />
+		<% }); %>
+		</div>
+		<div class="text_container">
+			<div class="text current_time">
+				t = 
+				<div class="current_time_value">0.0</div><div class="current_time_unit"><!--
+					<% if (typeof time_unit !== "undefined") { %>
+						--><%= time_unit %>
+					<% } else { %>
+						-->s
+					<% } %>
+				</div>
+			</div>
+			<div class="motion_result">
+				<span class="motionCorrect">O</span>
+				<span class="motionWrong">X</span>
+			</div>
+			<!--
+			<span class="text">
+				|
+			</span>
+			<span class="text text_hint">
+				--
+			</span>
+			-->
+		</div>
+		<% if (typeof scale_data !== "undefined" && scale_data === true) { %>
+			<div class="scale">
+				Measure Scale
+				<div class="scale_values">
+					<input type="text" id="scale_factor_value"/>
+					<input type="text" id="scale_factor_unit" value="pixels" disabled/>
+					=
+					<input type="text" id="scale_real_value" placeholder="number"/>
+					<input type="text" id="scale_real_unit" value="<%= scale_unit %>" disabled/>
+				</div>
+				<div class="scale_controls">
+					<input type="button" id="scale_ok" value="OK"/>
+					<input type="button" id="scale_reset" value="Reset"/>
+				</div>
+			</div>
+		<% } %>
+		<div class="analysis_controls">
+			<div class="clear_data" title="Clear Data">
+			</div>
+			<div class="scrub_bar">
+				<span class="meter"></span>
+			</div>
+			<% if (typeof user_value !== "undefined") { %>
+				<input id="user_value" class="text" type="text" />
+				<div class="userval" title="Use Value">
+				</div>
+			<% } %>
+			<% if (typeof scale_data !== "undefined" && scale_data === true) { %>
+				<input type="button" id="scale_show_button" value="Scale"/>
+			<% } %>
+			<% if (typeof change_origin !== "undefined" && change_origin === true) { %>
+				<input type="button" id="origin_toggle_button" value="Origin"/>
+			<% } %>
+			<div class="left" title="Previous Frame">
+			</div>
+			<div class="right" title="Next Frame">
+			</div>
+		</div>
+	</div>
+<% if (typeof scrub_bar_location !== "undefined" && scrub_bar_location == "below") { %>
+</div> <!-- flex-wrapper -->
+<% } %>
+
+
+<div class="help_text">
+	<p>
+		To use this analysis widget on Mobile devices may be a bit difficult.
+		The allowable radius for touches is pretty small; please try a few times
+		before giving up!
+	</p>
+</div>

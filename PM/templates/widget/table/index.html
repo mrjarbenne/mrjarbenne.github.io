@@ -1,0 +1,17 @@
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+<div id="<%= id %>" class="fill scrollable table_div">
+	<p class="title" >
+		<%= title %>
+	</p>
+	<table width="100%">
+		<thead>
+			<tr>
+				<% $.each(columns, function(index, header){ %>
+					<th><%= header %></th>
+				<% }); %>
+			</tr>
+		</thead>
+	</table>
+</div>

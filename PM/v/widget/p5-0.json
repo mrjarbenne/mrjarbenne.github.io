@@ -1,0 +1,11 @@
+{
+  "data": {
+    "url": "https://player.vimeo.com/video/174022695",
+    "autoplay": true,
+    "id": "Widget_p5-0"
+  },
+  "layout": {
+    "template": "vimeo",
+    "type": "widget"
+  }
+}

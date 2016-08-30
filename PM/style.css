@@ -1,0 +1,196 @@
+/* Structural Styling */
+html, body {
+	width: 100%;
+	height: 100%;
+	min-width: 800px;
+	min-height: 450px;
+}
+
+body, .credits {
+	margin: 0px;
+}
+
+noscript p {
+	padding: 5%;
+}
+
+#container {
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#load-block {
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+}
+
+.fill {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.sector.wide {
+	width: 100%;
+	height: 50%;
+}
+
+.sector.quarter {
+	width: 50%;
+	height: 50%;
+}
+
+.sector.tall {
+	width: 50%;
+	height: 100%;
+}
+
+.sector.tall .slot {
+	padding: 1%;
+	width: 94%;
+	height: 97%;
+}
+
+.sector .slot {
+	padding: 0.5%;
+	width: 97%;
+	height: 97%;
+}
+
+.sector.wide .slot {
+	padding: 0.5%;
+	width: 97%;
+	height: 94%;
+}
+
+.sector.quarter .slot {
+	padding: 1%;
+	width: 94%;
+	height: 94%;
+}
+
+.sector .slot .widget {
+	width: 100%;
+	height: 100%;
+}
+
+/* Positional Styling */
+#load-block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.sector .slot {
+	top: 1%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.sector.quarter .slot, .sector.wide .slot {
+	top: 2%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+#page-container {
+	float: left;
+}
+
+/* Textual Styling */
+body {
+	font-size: 0.85em;
+	font-family: Verdana,sans-serif;
+}
+
+noscript p {
+	text-align: center;
+}
+
+.sector .slot .widget .scrollable {
+	overflow: auto;
+}
+
+.xxl-font {
+	font-size: 1.4em;
+}
+
+.xl-font {
+	font-size: 1.25em;
+}
+
+.text-color-1 {
+	color: #013a3a;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.hidden_text {
+	text-indent: -9999px;
+}
+
+.link {
+	color: inherit;
+}
+
+/* Graphical Styling */
+body {
+	background-color: rgba(215,213,166, 1.0);
+}
+
+#load-block {
+	background-image: url('img/loadbg.gif');
+	background-position: center 20%;
+	background-repeat: no-repeat;
+}
+
+.sector .slot {
+	/* Fallback for no RGBa */
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.3);
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.sector .slot .widget {
+	background-color: #eee;
+}
+
+/* Miscellaneous Styling */
+.hidden_text {
+	cursor: auto !important;
+}
+
+.clear {
+	clear: both;
+}
+
+.help_text {
+	display: none;
+}

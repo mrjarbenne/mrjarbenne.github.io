@@ -1,0 +1,30 @@
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+<div id="<%= id %>" class="fill scrollable">
+	<div class="question_prompt">
+		<% if (typeof question_prompt !== "undefined") { %>
+			<%= question_prompt %>
+		<% } else { %>
+			You must complete all fields before proceeding!
+		<% } %>
+	</div>
+	<p class="question_text" >
+		<%= question_text %>
+	</p>
+	<div class="question_answers" >
+		<select id='dropdown_branching'>
+			<% $.each(question_answers, function(index, value) { %>
+				<option value='<%= index %>'><%= value %></option>	
+			<% }); %>
+		</select>
+	</div>
+	<div class="question_prompt">
+		<% if (typeof question_prompt !== "undefined") { %>
+			<%= question_prompt %>
+		<% } else { %>
+			You must complete all fields before proceeding!
+		<% } %>
+	</div>
+</div>
+

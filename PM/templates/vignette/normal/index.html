@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="../templates/templateStyle.css">
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/vignette.css">
+<% } %>
+<div id="header" class="xxl-font text-color-1">
+	<div class="vtitle"><%= title %></div>
+	<div class="vigtitle">Interactive Video Vignette</div>
+</div>
+<div id="page-container">
+</div>
+<div id="pagenav" class="xl-font text-color-1">
+	<span class="left">&larr; Previous Page</span>
+	<span class="middle">Page 9 of 10</span>
+	<span class="right">Next Page &rarr;</span>
+	<a href="<%= finish_url %>" class="right finish link">Next Page &rarr;</a>
+	<p class="finish link credits">Credits</p>
+</div>

@@ -1,0 +1,25 @@
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+<div id="<%= id %>" class="frame_play_div">
+	<div class="nostretch">
+	<% $.each(frames, function (index, frame) { %>
+		<img class="image real-image frame_play_img" 
+			 src="<%= resource_url %>/<%= frame %>"
+			 style="display:none"/>
+	<% }); %>
+	</div>
+	<div class="controls">
+		<div class="play" title="Play/Pause">
+		</div>
+		<div class="pause" title="Play/Pause">
+		</div>
+		<div class="scrub_bar">
+			<span class="meter"></span>
+		</div>
+		<div class="left" title="Previous Frame">
+		</div>
+		<div class="right" title="Next Frame">
+		</div>
+	</div>
+</div>

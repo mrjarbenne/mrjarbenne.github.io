@@ -1,0 +1,5 @@
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+<iframe id="<%= id %>" class="fill frame_div" src="<%= url %>">
+</iframe>

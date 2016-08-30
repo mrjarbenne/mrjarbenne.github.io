@@ -1,0 +1,21 @@
+{
+  "data": {
+    "is_head": false,
+    "title": "Page_credits",
+    "aspect-horizontal": 16,
+    "aspect-vertical": 9,
+    "min-width": 800,
+    "max-width": 1200
+  },
+  "layout": {
+    "template": "1",
+    "type": "page"
+  },
+  "elements": [
+    {
+      "slot": "#slot-1",
+      "type": "widget",
+      "data": "credits-0.json"
+    }
+  ]
+}

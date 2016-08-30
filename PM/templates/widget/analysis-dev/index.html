@@ -1,0 +1,86 @@
+<style>
+#<%= id %> {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<% if (typeof custom_styles !== "undefined" && custom_styles === true) { %>
+	<link rel="stylesheet" type="text/css" href="resources/Styles/<%= id %>.css">
+<% } %>
+<div id="<%= id %>" class="analysis_dev_div" >
+	<div class="analysis_message">
+		Please click closer to the target.
+	</div>
+	<div class="instruction_message">
+	<% if (typeof instructions_location !== "undefined") { %>
+		<% if (instructions_location === "top") { %>
+			<div class="instruction_message_top">
+		<% } else if (instructions_location === "bottom") { %>
+			<div class="instruction_message_bottom">
+		<% } else if (instructions_location === "middle") { %>
+			<div class="instruction_message_middle">
+		<% } else { %>
+			<div class="instruction_message_middle">
+		<% } %>
+	<% } else { %>
+		<div class="instruction_message_middle">
+	<% } %>
+		<% if (typeof instructions !== "undefined") { %>
+			<%= instructions %>
+		<% } %>
+		</div>
+	</div>
+	<canvas class="the_canvas">
+		Sorry, your browser does not support html5.
+	</canvas>
+	<img class="image analysis faux-image" src="<%= resource_url %>/<%= frames[0] %>" />
+	<% $.each(frames, function (index, frame) { %>
+		<img class="image analysis analysis_img real-image" src="<%= resource_url %>/<%= frame %>" />
+	<% }); %>
+
+	<div class="text_container">
+		<div class="text current_time">
+			t = 0.0s
+
+
+		</div>
+		
+		<!--
+
+
+
+
+
+		<span class="text">
+			|
+		</span>
+		<span class="text text_hint">
+			--
+		</span>
+		-->
+	</div>
+	<div class="analysis_controls">
+		<div class="clear_data" title="Clear Data">
+		</div>
+		<div class="scrub_bar">
+			<span class="meter"></span>
+		</div>
+		<% if (typeof user_value !== "undefined") { %>
+			<input id="user_value" class="text" type="text" />
+			<div class="userval" title="Use Value">
+			</div>
+		<% } %>
+		<div class="left" title="Previous Frame">
+		</div>
+		<div class="right" title="Next Frame">
+		</div>
+	</div>
+</div>
+<div class="help_text">
+	<p>
+		To use this analysis widget on Mobile devices may be a bit difficult.
+		The allowable radius for touches is pretty small; please try a few times
+		before giving up!
+	</p>
+</div>

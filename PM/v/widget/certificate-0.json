@@ -1,0 +1,23 @@
+{
+  "data": {
+    "fields": [
+      {
+        "name": "login.lastname",
+        "type": "display"
+      }
+    ],
+    "exports_to": "",
+    "custom_formatting": true,
+    "prevent_back": false,
+    "question_prompt": "",
+    "images": [
+      "certificate.gif",
+      "PM-on-iPad.jpg"
+    ],
+    "id": "Widget_certificate-0"
+  },
+  "layout": {
+    "template": "enhanced-text",
+    "type": "widget"
+  }
+}
