@@ -1,9 +1,0 @@
-{
-  "data": {
-    "id": "Widget_credits-0"
-  },
-  "layout": {
-    "template": "text-html",
-    "type": "widget"
-  }
-}
